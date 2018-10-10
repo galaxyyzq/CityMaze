@@ -32,8 +32,6 @@ public class Maze extends Application {
 
 
 
-
-
         gp.menu.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
 
             primaryStage.setScene(MenuScene);

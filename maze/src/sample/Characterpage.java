@@ -13,9 +13,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 
-public class Characterpage {
-	
-	public void Character() {
+public class Characterpage extends BorderPane {
+
+	public void initial() {
 	
 		HBox gender = new HBox(10);
 		//Label choosegender = new Label("Choose gender");
@@ -26,17 +26,15 @@ public class Characterpage {
 		gender.getChildren().addAll(BackBtn,MaleBtn,FemaleBtn);
 		
 		VBox character  = new VBox();
-		String path = "resources/"
+		String path = "resources/";
 		Image imgage =  new Image("https://i0.wp.com/static.vectorcharacters.net/uploads/2013/02/Schoolboy_Vector_Character1.jpg");
 		ImageView imgView = new ImageView(imgage);
 		character.getChildren().addAll(imgView);
 		character.setPadding(new Insets(30, 30, 30, 30));
 
-		BorderPane characterpane = new BorderPane();
 		
-		characterpane.setTop(gender);
-		characterpane.setCenter(character);
-		Scene launch = new Scene(characterpane,600,600);
+		this.setTop(gender);
+		this.setCenter(character);
 
 }
 }
