@@ -2,10 +2,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import sample.Characterpage;
-import sample.Gamepage;
-import sample.Launchpage;
-import sample.Menupage;
+import sample.*;
 import sun.jvm.hotspot.debugger.Page;
 
 public class Maze extends Application {
@@ -21,16 +18,37 @@ public class Maze extends Application {
         Menupage mp = new Menupage();
         Characterpage cp = new Characterpage();
         Launchpage lp = new Launchpage();
+        Mappage map = new Mappage();
         Scene GameScene = new Scene(gp,600,600);
         gp.initial();
         Scene MenuScene = new Scene(mp,600,600);
         mp.initial();
-        Scene Characterscene = new Scene(cp,600,600);
+        Scene CharacterScene = new Scene(cp,600,600);
         cp.initial();
-        Scene Launchscene = new Scene(lp,600,600);
+        Scene LaunchScene = new Scene(lp,600,600);
         lp.initial();
+        Scene MapScene = new Scene(map,600,600);
+        map.initial();
 
 
+
+        lp.Startgame.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+
+            primaryStage.setScene(CharacterScene);
+
+        });
+
+        cp.ok.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+
+            primaryStage.setScene(MapScene);
+
+        });
+
+        map.start.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+
+            primaryStage.setScene(GameScene);
+
+        });
 
         gp.menu.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
 
@@ -38,7 +56,7 @@ public class Maze extends Application {
 
         });
 
-        primaryStage.setScene(GameScene);
+        primaryStage.setScene(LaunchScene);
         primaryStage.show();
 
     }
