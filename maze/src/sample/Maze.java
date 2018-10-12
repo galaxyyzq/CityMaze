@@ -19,6 +19,7 @@ public class Maze extends Application {
         Characterpage cp = new Characterpage();
         Launchpage lp = new Launchpage();
         Mappage map = new Mappage();
+
         Scene GameScene = new Scene(gp,600,600);
         gp.initial();
         Scene MenuScene = new Scene(mp,600,600);
@@ -29,8 +30,6 @@ public class Maze extends Application {
         lp.initial();
         Scene MapScene = new Scene(map,600,600);
         map.initial();
-
-
 
         lp.Startgame.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
 
@@ -55,6 +54,13 @@ public class Maze extends Application {
             primaryStage.setScene(MenuScene);
 
         });
+
+        gp.menu.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+
+            primaryStage.setScene(MenuScene);
+
+        });
+        
 
         primaryStage.setScene(LaunchScene);
         primaryStage.show();

@@ -27,8 +27,6 @@ import javafx.scene.layout.VBox;
             this.getChildren().addAll(launchbox);
             this.setStyle("-fx-background-color:#336699");
             this.setAlignment(Pos.CENTER);
-	
-
 }
 
 }

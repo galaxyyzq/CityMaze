@@ -52,7 +52,6 @@ public class Gamepage extends BorderPane {
                     gp.add(mazeButton[i][j], i, j);
                 }
             }
-
             Text timer = new Text("02:00");
             Text money = new Text("money: 1800");
             HBox header = new HBox(200);
@@ -60,11 +59,9 @@ public class Gamepage extends BorderPane {
             header.getChildren().addAll(menu, timer, money);
             header.getAlignment();
 
-
             this.setPadding(new Insets(10, 20, 10, 20));
             this.setCenter(gp);
             this.setTop(header);
-
         }
 
 }
