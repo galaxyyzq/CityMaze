@@ -19,7 +19,7 @@ public class Characterpage extends GridPane {
 
 	public void initial() {
 	
-		VBox header = new VBox();
+		VBox header = new VBox(50);
 		//Label choosegender = new Label("Choose gender");
 		header.setPadding(new Insets(10, 10, 10,10));
 		MaleBtn.setPrefSize(150,150);
@@ -29,9 +29,10 @@ public class Characterpage extends GridPane {
 		header.getChildren().addAll(BackBtn,MaleBtn,FemaleBtn);
 		VBox character  = new VBox();
 		Image imageboy =  new Image("./sample/boy.png");
-		//Image image
-		ImageView imgView = new ImageView(imageboy);
-		character.getChildren().addAll(imgView);
+		Image imagegirl = new Image( "./sample/girl.png");
+		ImageView imgViewboy = new ImageView(imageboy);
+		//ImageView imagViewgirl = new ImageView(imagegirl);
+		character.getChildren().addAll(imgViewboy);
 		character.setPadding(new Insets(30, 30, 30, 30));
 
 		this.add(header,0,0);
@@ -39,4 +40,14 @@ public class Characterpage extends GridPane {
 		this.add(ok,2,2);
 
 }
+
+/*
+if  public void ButtonClicked(MouseEvent e)
+    {
+        if (e.getSource()== MaleBtn)
+            thestage.setScene(scene2);
+        else
+            thestage.setScene(scene1);
+    }
+ */
 }
