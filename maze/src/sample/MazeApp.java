@@ -5,7 +5,7 @@ import javafx.stage.Stage;
 import sample.*;
 import sun.jvm.hotspot.debugger.Page;
 
-public class Maze extends Application {
+public class MazeApp extends Application {
 
     public static void main(String[] args) { Application.launch(args); }
 
@@ -20,15 +20,15 @@ public class Maze extends Application {
         Launchpage lp = new Launchpage();
         Mappage map = new Mappage();
 
-        Scene GameScene = new Scene(gp,600,600);
+        Scene GameScene = new Scene(gp,800,600);
         gp.initial();
-        Scene MenuScene = new Scene(mp,600,600);
+        Scene MenuScene = new Scene(mp,800,600);
         mp.initial();
-        Scene CharacterScene = new Scene(cp,600,600);
+        Scene CharacterScene = new Scene(cp,800,600);
         cp.initial();
-        Scene LaunchScene = new Scene(lp,600,600);
+        Scene LaunchScene = new Scene(lp,800,600);
         lp.initial();
-        Scene MapScene = new Scene(map,600,600);
+        Scene MapScene = new Scene(map,800,600);
         map.initial();
 
         lp.Startgame.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
@@ -46,6 +46,7 @@ public class Maze extends Application {
         map.start.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
 
             primaryStage.setScene(GameScene);
+            gp.setTime();
 
         });
 
