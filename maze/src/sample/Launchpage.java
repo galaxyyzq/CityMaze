@@ -40,7 +40,7 @@ public class Launchpage extends FlowPane {
             launchbox.getChildren().addAll(title, Startgame,Records,exit);
 
             this.getChildren().addAll(launchbox);
-            this.setStyle("-fx-background-color:#ff423b");
+            this.setStyle("-fx-background-color:#ff9d5c");
             this.setAlignment(Pos.CENTER);
 }
 
