@@ -17,6 +17,7 @@ public class Characterpage extends GridPane {
 	public Button ok = new Button("OK");
 	public Button BackBtn = new Button("<<");
 
+
 	public void initial() {
 
 		VBox header = new VBox();

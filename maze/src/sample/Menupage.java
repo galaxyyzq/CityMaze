@@ -6,10 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 
 public class Menupage extends StackPane {
@@ -30,15 +27,23 @@ public class Menupage extends StackPane {
         textbox.setAlignment(Pos.CENTER);
 
         VBox btnbox = new VBox(cont, reset, exit);
+        cont.setPrefSize(100,50);
+        cont.setStyle("-fx-background-color:#FFA630");
+        reset.setPrefSize(100,50);
+        reset.setStyle("-fx-background-color:#FFA630");
+        exit.setPrefSize(100,50);
+        exit.setStyle("-fx-background-color:#FFA630");
         btnbox.setAlignment(Pos.CENTER);
+        btnbox.setSpacing(30);
         btnbox.setPadding(new Insets(20, 0, 260, 0));
+        btnbox.setAlignment(Pos.CENTER);
 
         BorderPane view = new BorderPane();
         view.setCenter(btnbox);
         view.setTop(textbox);
 
-        Label background = new Label();
+        this.getChildren().addAll(view);
+        this.setStyle("-fx-background-color:#0FA3B1");
 
-        this.getChildren().addAll(background, view);
     }
 }

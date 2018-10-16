@@ -1,4 +1,7 @@
+package sample;
+
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -61,7 +64,16 @@ public class MazeApp extends Application {
             primaryStage.setScene(MenuScene);
 
         });
-        
+
+        lp.exit.addEventHandler(MouseEvent.MOUSE_CLICKED,event -> {
+
+                    Platform.exit();
+        });
+
+        mp.exit.addEventHandler(MouseEvent.MOUSE_CLICKED,event -> {
+
+                    Platform.exit();
+        });
 
         primaryStage.setScene(LaunchScene);
         primaryStage.show();
