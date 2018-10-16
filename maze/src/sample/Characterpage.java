@@ -15,13 +15,12 @@ import javafx.scene.layout.*;
 public class Characterpage extends GridPane {
 
 	public Button ok = new Button("OK");
-	public Button BackBtn = new Button("<");
+	public Button BackBtn = new Button("<<");
 
 	public void initial() {
-	
+
 		VBox header = new VBox();
 		Label choose = new Label("Customize your character by drag and drop");
-
 		header.setPadding(new Insets(10, 10, 10,10));
 
 
@@ -43,20 +42,21 @@ public class Characterpage extends GridPane {
 		FemaleBtn.setId("F");
 
 
-		MaleBtn.setPrefSize(80,80);
-		FemaleBtn.setPrefSize(80,80);
+		MaleBtn.setPrefSize(100,100);
+		FemaleBtn.setPrefSize(100,100);
 		ok.setPrefSize(80,80);
-		header.getChildren().addAll(BackBtn,MaleBtn,FemaleBtn);
+		header.getChildren().addAll(choose,BackBtn,MaleBtn,FemaleBtn);
 
 
 		VBox character  = new VBox();
 		Image imageboy =  new Image("./sample/boy.png");
 		ImageView imgView = new ImageView(imageboy);
+		imgView.setFitHeight(300);
+		imgView.setFitWidth(300);
 		character.getChildren().addAll(imgView);
-		character.setPadding(new Insets(30, 0, 30, 0));
+		character.setPadding(new Insets(30, 30, 30, 30));
 
 		this.add(header,0,0);
-		this.add(choose, 1,0);
 		this.add(character,1,1);
 		this.add(ok,2,2);
 
