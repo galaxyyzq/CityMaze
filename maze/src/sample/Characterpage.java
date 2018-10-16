@@ -18,6 +18,7 @@ public class Characterpage extends GridPane {
 	public Button ok = new Button("OK");
 	public Button BackBtn = new Button("Back");
 
+
 	public void initial() {
 
 	    //back button
